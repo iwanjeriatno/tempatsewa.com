@@ -1,5 +1,5 @@
 <?php
-    include '../../../db/koneksi.php';
+    include '../../db/koneksi.php';
 
 
     if(isset($_POST['simpan'])) {
@@ -10,9 +10,9 @@
         $video      = $_FILES['video']['name'];
         $deskripsi  = $_POST['deskripsi'];
 
-        $lokasi_gambar = '../../../assets/img/clients/'.$gambar;
-        $lokasi_audio  = '../../../assets/img/clients/'.$audio;
-        $lokasi_video  = '../../../assets/img/clients/'.$video;
+        $lokasi_gambar = '../../assets/img/clients/'.$gambar;
+        $lokasi_audio  = '../../assets/img/clients/'.$audio;
+        $lokasi_video  = '../../assets/img/clients/'.$video;
 
         if(move_uploaded_file($_FILES['gambar']['tmp_name'], $lokasi_gambar)){
             if(move_uploaded_file($_FILES['audio']['tmp_name'], $lokasi_audio)){

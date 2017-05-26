@@ -61,9 +61,21 @@
         <?php
 
             if(isset($_GET['menu'])) {
+                // clients
                 if($_GET['menu'] == 'clients') {
-                    require 'clients.php';
+                    require 'clients/tampil.php';
                 }
+                else if($_GET['menu'] == 'tambah-clients') {
+                    require 'clients/form_tambah.php';
+                }
+                else if($_GET['menu'] == 'ubah-clients') {
+                    require 'clients/form_ubah.php';
+                }
+                else if($_GET['menu'] == 'hapus-clients') {
+                    require 'clients/hapus.php';
+                }
+
+                // default
                 else {
                     require 'dashboard.php';
                 }
